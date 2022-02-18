@@ -19,7 +19,7 @@ def index():
 
         output = pred.prediction(Fcatgeory, Ftype, Fyear, Fmonth)     
 
-    return render_template("index.html", value = output[0])
+    return render_template("index.html", value = output)
 
 
 # This is for model predict result
@@ -40,4 +40,4 @@ def predict():
     return jsonify({"prediction": output})
 
 if __name__ == "__main__":
-    app.run(debug = False)
+    app.run(debug = True)
