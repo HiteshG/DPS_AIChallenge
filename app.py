@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request, render_template
 import json
 
-app = Flask(__name__)
-
 import pred as pred
+
+app = Flask(__name__)
 
 # This function is for website 
 @app.route("/", methods = ["GET","POST"])
@@ -17,10 +17,10 @@ def index():
         Fyear = request.form["year"]
         Fmonth = request.form["month"]
 
-        output = pred.prediction(Fcatgeory, Ftype, Fyear, Fmonth)
-        
+        output = pred.prediction(Fcatgeory, Ftype, Fyear, Fmonth)     
 
-    return render_template("index.html", value = output)
+    return render_template("index.html", value = output[0])
+
 
 # This is for model predict result
 @app.route("/predict", methods = ["POST"])
