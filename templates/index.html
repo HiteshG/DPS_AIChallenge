@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Hitesh Gautam">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{ url_for( 'static' , filename = '/manifest.json') }}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Hitesh Gautam</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Work+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/libraries.css') }}" >
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}" >
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-light">
+      <nav class="navbar navbar-expand-lg border-bottom-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <span id="nametag" style="color: #2965ff; font-weight: 600; font-size: 28px;">Digital Product School AI Challenge</span>
+          </a>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header>
+    <!-- /.Header -->
+
+    <!-- ==========================
+         fancybox layout 2
+    =========================== -->
+    <!--  <div id="particles-js"></div> -->
+
+    <!-- ========================= 
+        Contact layout 1
+    =========================  -->
+    <section class="contact-layout1 pt-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <h2 class="heading-subtitle">I believe in the power of simple communication.</h2>
+            <h2 class="heading-title">Feel free to fill up !</h2>
+            <h2> Result</h2>
+            {% if value %}
+              <p> Your predicted value:</p> {{value}}
+            {% endif %}
+
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <form method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Category" id="category" name="category" required>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Type" id="type" name="type"
+                  required>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Year" id="year" name="year"
+                  required>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Month" id="month" name="month"
+                  required>
+                <span class="focus-border"></span>
+              </div>
+              <button type="submit" class="btn btn__primary">Submit</button>
+              <div class="contact-result"></div>
+            </form>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Contact layout 1 -->
+
+    
+
+    <!-- ========================
+        Footer
+      ========================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer-newsletter">
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <h5 class="footer-newsletter__title">
+              <span>Reach out to me!</span>
+              <span><a href="mailto:hiteshgautam026@gmail.com">hiteshgautam026@gmail.com</a></span>
+            </h5>
+          </div><!-- /.col-lg-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <h6 class="footer-widget__title">Social</h6>
+            <div class="footer-widget__content">
+              <ul class="social-icons list-unstyled">
+                <li><a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#" title="github"><i class="fab fa-github"></i></a></li>
+              </ul><!-- /.social-icons -->
+            </div>
+          </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <div class="footer-copyright  mt-50">
+              <span class="mb-0">&copy; 2021 Hitesh Gautam. All Rights Reserved
+              </span>
+            </div><!-- /.Footer-copyright -->
+          </div><!-- /.col-lg-9 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+  </div><!-- /.wrapper -->
+
+  <script src="{{ url_for('static', filename ='js/jquery-3.5.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename ='js/plugins.js') }}"></script>
+  <script src="{{ url_for('static', filename ='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename ='js/textCursor.js') }}"></script>
+</body>
+
+</html>
